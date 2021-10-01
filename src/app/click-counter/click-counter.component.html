@@ -1,0 +1,25 @@
+<div class="click-counter-container">
+
+  <ng-container *ngIf="!gameOver">
+  Clicks: {{clicks}}<br>
+  Max time: {{maxTime | seconds : 's'}}
+  </ng-container>
+
+  <ng-container *ngIf="gameOver && won">
+    Hurray, you won!
+  </ng-container>
+
+  <ng-container *ngIf="gameOver && !won">
+    Oh no, you lost!
+  </ng-container>
+
+</div>
+
+
+
+
+
+<!--<div class="click-counter-container">-->
+<!--  Clicks: {{clicks | clicks : startValue}}<br>-->
+<!--  Start value: {{startValue}}-->
+<!--</div>-->

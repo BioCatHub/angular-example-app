@@ -1,0 +1,16 @@
+<ng-container *ngIf="!gameOver">
+  <p>Guess the secret color!</p>
+  <div *ngFor="let color of colors"
+       [style.backgroundColor]="color"
+       class="color-box"
+       (click)="selectColor(color)">
+  </div>
+</ng-container>
+
+<ng-container *ngIf="gameOver && won">
+  Hurray, you won!
+</ng-container>
+
+<ng-container *ngIf="gameOver && !won">
+  Oh no, you lost!
+</ng-container>
